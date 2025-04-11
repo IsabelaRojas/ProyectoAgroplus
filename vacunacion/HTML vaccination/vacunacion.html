@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css vaccination/vacunacion.css">
+    <link rel="stylesheet" href="../../components/agroplus styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emblema+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <title>Formulario Crias</title>
+</head>
+<body>
+    <header>
+        <section class="header-container">
+            <div class="header-image">
+                <div class="logo-agroplus">
+                    <a href="../../dashboard/HTML dashboard/dashboard.html">
+                        <img src="../../assets/iconos/logo agroplus.png" alt="Logo Agroplus">
+                    </a>
+                </div>
+                <div class="logo-agroplus">
+                    <a href="../../dashboard/HTML dashboard/dashboard.html">
+                        <img src="../../assets/iconos/Agroplus.png" alt="Agroplus">
+                    </a>
+                </div>
+            </div>
+            <div class="menu-simple">
+                <button class="config-btn" id="openConfigModal">
+                    <i class="fa-solid fa-gear"></i> Configuración
+                </button>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="container-form">
+            <div class="text-form-animal">
+                <h2>Formulario Vacunación</h2>
+            </div>
+            <div class="div-form-animal">
+                <input class="controls" type="text" id="id_vacuna" name="id_vacuna" placeholder="Ingrese el ID de la vacuna">
+                <input class="controls" type="text" id="id_animal" name="id_animal" placeholder="Ingrese el ID del animal">
+                <input class="controls" type="text" id="tipo_vacuna" name="tipo_vacuna" placeholder="Ingrese el tipo de vacuna">
+
+                <form>
+                    <select class="controls" id="ganado" name="ganado">
+                        <option value="" disabled selected>Seleccione un tipo de ganado</option>
+                        <option value="vacuno">Vacuno</option>
+                        <option value="Ovino">Ovino</option>
+                        <option value="Porcino">Porcino</option>
+                        <option value="Caprino">Caprino</option>
+                        <option value="Equino">Equino</option>
+                        <option value="gallina">Gallo / Gallina</option>
+                    </select>
+         
+                    <div id="opciones-animales" style="display: none;">
+                        <label for="animales">Seleccione un animal:</label>
+                        <select class="controls" id="animales" name="animales">
+                           
+                        </select>
+                    </div>
+
+
+                        <input class="controls" type="text" id="dosis" name="dosis" placeholder="Ingrese la dosis aplicada">
+                      
+  
+                        <label class="control-radio" for="fecha_vacunacion">Fecha de vacunación:</label>
+                        <input class="controls" type="date" id="fecha_vacunacion" name="fecha_vacunacion">
+
+                        <input class="controls" type="text" id="id_laboratorio" name="id_laboratorio" placeholder="Ingrese el laboratorio de la vacuna">
+
+                        <input class="controls" type="submit">
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="cerrar-sesion">
+            <a href="../../auth/View HTML/Index.html">Cerrar Sesión</a>
+        </div>
+    </footer>
+</body>
+</html>

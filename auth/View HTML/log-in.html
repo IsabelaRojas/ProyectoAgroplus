@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - AgroPlus</title>
+    <link rel="stylesheet" href="../Css/log-in.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <section class="header-container"> 
+            <div class="header-image">
+                <div class="logo-agroplus">
+                    <img src="../../assets/iconos/logo agroplus.png" alt="Logo Agroplus">
+            </div>
+            <div class="logo-agroplus">
+                <img src="../../assets/iconos/Agroplus.png" alt="Agroplus">
+            </div>
+            </div>
+        </section>
+      </header>
+      <main>
+        <section class="container-formulario">
+            <div class="text-log-in">
+                <h2>Iniciar Sesión</h2>
+            </div>
+            <div class="div-formulario" id="login-container">
+                <form id="form-login">
+                    <input class="controls" type="email" name="correo_electronico" id="email" placeholder="Correo Electronico" required>
+                    <input class="controls" type="password" name="contrasena" id="password" placeholder="Contraseña" required>
+                    <input class="controls" type="submit" value="Iniciar sesión">
+                </form>
+                <div id="mensaje-exito">¡Inicio de sesión exitoso!</div>
+            </div>
+
+            <div id="dashboard-container" style="display: none;"></div>
+              
+            <div class="div-forgot-password">
+                <a href="./forgotPassword.html">¿Olvidó su contraseña?</a>
+            </div>
+            
+            <div class="div-registrarse"> 
+                <a href="./sign-up.html">Regístrese aquí</a>
+            </div>
+        </section>
+      </main>
+      <script src="dom.js"></script>
+</body>
+</html>
