@@ -1,0 +1,314 @@
+/* main*/
+main .background-history-dashboard  {
+    background-image: url('https://images.pexels.com/photos/19992607/pexels-photo-19992607/free-photo-of-ovejas-en-pasto-verde.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+main .bloq-registrer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 15px 20px;
+    width: 300px;
+    margin-bottom: 30px;
+    background-color: #265e28;
+    color: white;
+    border-radius: 30px;
+    border: black 2px solid;
+    transition: background-color 0.3s;
+}
+
+.bloq-registrer a {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: bold;
+}
+
+.bloq-registrer:hover {
+    background-color: #1e4a21;
+}
+
+.bloq-privado h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: -2px -2px 0 rgb(1, 64, 6),
+                  2px -2px 0 rgb(1, 64, 6),
+                 -2px  2px 0 rgb(1, 64, 6),
+                  2px  2px 0 rgb(1, 64, 6);
+}
+
+.bloques-proyecto {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Tabla de historial */
+.tabla-historial {
+    width: 100%;
+    background-color: #265e28b2;
+    border-radius: 20px;
+    border: black 2px solid;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.tabla-historial table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+.tabla-historial th, 
+.tabla-historial td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tabla-historial th {
+    background-color: rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.tabla-historial tr:hover {
+    background-color: #1e4a21;
+}
+
+.tabla-historial .acciones {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.tabla-historial .acciones a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1e4a21;
+    transition: all 0.3s;
+}
+
+.tabla-historial .acciones a:hover {
+    background-color: #e4f26b;
+    color: #1e4a21;
+}
+
+.tabla-historial .acciones a i {
+    font-size: 1.2rem;
+}
+
+.tabla-vacia {
+    text-align: center;
+    padding: 30px;
+    color: white;
+    font-style: italic;
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.paginacion a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #265e28;
+    border-radius: 50%;
+    border: 1px solid black;
+    transition: all 0.3s;
+}
+
+.paginacion a:hover,
+.paginacion a.active {
+    background-color: #e4f26b;
+    color: #1e4a21;
+}
+
+/* Buscador */
+.buscador {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.buscador input {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+}
+
+.buscador button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #265e28;
+}
+.icon-whatsapp {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  
+  .whatsapp img {
+    width: 70px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+
+
+
+/* Estilos responsive */
+@media (max-width: 1200px) {
+    .bloques-proyecto {
+        width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    * {
+        font-size: 18px;
+    }
+    
+    .bloq-privado h1 {
+        font-size: 36px;
+    }
+    
+    .header-image .logo-agroplus {
+        margin-left: 20px;
+    }
+    
+    .header-container .barra-nav li {
+        margin-right: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    * {
+        font-size: 16px;
+    }
+    
+    .bloq-privado h1 {
+        font-size: 30px;
+    }
+    
+    .header-image .logo-agroplus {
+        height: 70px;
+        margin-left: 15px;
+    }
+    
+    .barra-nav a i {
+        font-size: 1.2rem;
+    }
+    
+    .header-container .barra-nav li {
+        margin-right: 10px;
+        padding-right: 10px;
+    }
+    
+    main .bloq-registrer {
+        width: 250px;
+        padding: 12px 15px;
+    }
+    
+    .tabla-historial th,
+    .tabla-historial td {
+        padding: 10px;
+    }
+    
+    .tabla-historial .acciones a {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    header .header-container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+    
+    .header-image {
+        margin-bottom: 10px;
+    }
+    
+    header {
+        height: auto;
+    }
+    
+    .bloq-privado h1 {
+        font-size: 26px;
+    }
+    
+    main {
+        padding: 20px 10px;
+    }
+    
+    .tabla-historial {
+        overflow-x: auto;
+    }
+    
+    .tabla-responiva {
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    .tabla-historial .acciones {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .tabla-historial .acciones a {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .paginacion a {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .buscador input {
+        padding: 12px 15px;
+    }
+}
