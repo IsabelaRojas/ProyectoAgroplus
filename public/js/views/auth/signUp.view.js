@@ -1,5 +1,6 @@
 import { renderHeader } from "../landing-page/header.view.js";
 import { redirectTo } from '../../app.js';
+import { signUpApi } from '../../api/auth.api.js';
 
 export function renderSignUp(app) {
     app.innerHTML =

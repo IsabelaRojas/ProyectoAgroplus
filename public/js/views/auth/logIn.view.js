@@ -1,5 +1,5 @@
 import { redirectTo } from '../../app.js'
-import { redirectTo } from '../../app.js';
+import { renderHeader } from '../landing-page/header.view.js'
 import { logInApi } from '../../api/auth.api.js';
 
 
