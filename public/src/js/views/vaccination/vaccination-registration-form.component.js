@@ -1,6 +1,11 @@
-export function renderVaccinationForm(root) {
-    root.innerHTML = `
-     <div class="div-form-animal">
+export function renderVaccinationRegistrationForm() {
+    return `
+    <main>
+        <section class="container-form">
+            <div class="text-form-animal">
+                <h2>Formulario Vacunación</h2>
+            </div>
+            <div class="div-form-animal">
                 <input class="controls" type="text" id="id_vacuna" name="id_vacuna" placeholder="Ingrese el ID de la vacuna">
                 <input class="controls" type="text" id="id_animal" name="id_animal" placeholder="Ingrese el ID del animal">
                 <input class="controls" type="text" id="tipo_vacuna" name="tipo_vacuna" placeholder="Ingrese el tipo de vacuna">
@@ -35,5 +40,7 @@ export function renderVaccinationForm(root) {
                         <input class="controls" type="submit">
                 </form>
             </div>
-   `
-    } 
+        </section>
+    </main>
+    `;
+}
