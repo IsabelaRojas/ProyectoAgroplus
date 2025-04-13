@@ -15,8 +15,8 @@ import { renderVaccinationRecords} from './views/vaccination/renderVaccinationRe
 const routes = {
     //Landing Page
     '/': landingPage,
-    
-    //auth 
+
+    //auth
     '/sign-up': renderSignUp,
     '/log-in': renderLogIn,
 
@@ -50,8 +50,6 @@ export function redirectTo(route) {
     window.history.pushState({}, '', route);
     renderPage(route);
 }
-
-
 
 //Detectar la url que coloco el usuario en el navegador y cargar la vista correspondiente
 window.addEventListener('popstate', () => {
