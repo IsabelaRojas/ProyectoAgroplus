@@ -1,6 +1,8 @@
 # Node.js dependencies
 node_modules/
 
+postgres_data/
+
 # Logs
 logs/
 *.log
