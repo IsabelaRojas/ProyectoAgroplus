@@ -1,0 +1,241 @@
+main, .background-history-dashboard {
+    background-image: url('https://images.pexels.com/photos/19992607/pexels-photo-19992607/free-photo-of-ovejas-en-pasto-verde.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+main .bloq-registrer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    width: 280px;
+    max-width: 90%;
+    margin-bottom: 25px;
+    background-color: #265e28;
+    color: white;
+    border-radius: 25px;
+    border: black 2px solid;
+}
+
+.bloq-registrer a {
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.bloq-registrer:hover {
+    background-color: #1e4a21;
+}
+
+.bloq-privado h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 25px;
+    padding: 0 15px;
+    text-shadow:
+        -2px -2px 0 rgb(1, 64, 6),
+        2px -2px 0 rgb(1, 64, 6),
+        -2px 2px 0 rgb(1, 64, 6),
+        2px 2px 0 rgb(1, 64, 6);
+}
+
+.bloques-proyecto {
+    width: 90%;
+    max-width: 600px;
+}
+
+.bloques-proyecto li {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.bloq {
+    display: block;
+    padding: 15px;
+    background-color: #265e28b2;
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+    border: black 2px solid;
+}
+
+.bloq:hover {
+    background-color: #1e4a21;
+}
+
+/* Media Queries para Diseño Responsive */
+/* Tablets y dispositivos medianos */
+@media screen and (max-width: 992px) {
+    * {
+        font-size: 16px;
+    }
+
+    .header-container {
+        padding: 5px;
+    }
+    
+    .header-image .logo-agroplus {
+        height: 50px;
+        margin-left: 10px;
+    }
+    
+    .header-container .barra-nav li {
+        padding-right: 10px;
+        margin-right: 10px;
+    }
+    
+    .bloq-privado h1 {
+        font-size: 1.4rem;
+    }
+    
+    .bloques-proyecto {
+        width: 80%;
+    }
+}
+
+/* Dispositivos móviles */
+@media screen and (max-width: 768px) {
+    * {
+        font-size: 14px;
+    }
+
+    header .header-container {
+        flex-direction: column;
+        padding: 10px 0;
+        height: auto;
+        min-height: 60px;
+    }
+    
+    .header-image .logo-agroplus {
+        height: 45px;
+        margin-left: 0;
+        margin-bottom: 8px;
+    }
+    
+    .header-container .barra-nav {
+        width: 100%;
+        justify-content: center;
+        padding: 5px 0;
+    }
+    
+    .header-container .barra-nav li {
+        padding-right: 8px;
+        margin-right: 8px;
+        margin-bottom: 5px;
+    }
+    
+    main {
+        min-height: calc(100vh - 130px);
+    }
+    
+    .bloq-privado h1 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+    
+    .bloq-registrer {
+        width: 250px;
+        padding: 12px;
+    }
+    
+    .bloques-proyecto {
+        width: 100%;
+    }
+    
+    .bloq {
+        padding: 12px;
+        border-radius: 20px;
+    }
+    
+    footer {
+        height: 45px;
+        justify-content: center;
+        padding-right: 0;
+    }
+}
+
+/* Dispositivos muy pequeños */
+@media screen and (max-width: 480px) {
+    * {
+        font-size: 14px;
+    }
+    
+    .header-image .logo-agroplus {
+        height: 40px;
+    }
+    
+    .header-container .barra-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .header-container .barra-nav li {
+        margin-bottom: 5px;
+        padding-right: 6px;
+        margin-right: 6px;
+    }
+    
+    .barra-nav a i {
+        font-size: 1rem;
+    }
+    
+    .bloq-privado h1 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .bloq-registrer {
+        width: 220px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+    }
+    
+    .bloq-registrer a {
+        gap: 5px;
+    }
+    
+    .bloques-proyecto li {
+        gap: 10px;
+    }
+    
+    .bloq {
+        padding: 10px;
+    }
+    
+    footer {
+        height: 40px;
+    }
+}
+
+/* Para dispositivos extremadamente pequeños */
+@media screen and (max-width: 360px) {
+    .header-image .logo-agroplus {
+        height: 35px;
+        margin-left: 5px;
+    }
+    
+    .bloq-privado h1 {
+        font-size: 1.1rem;
+    }
+    
+    .bloq-registrer {
+        width: 200px;
+    }
+}

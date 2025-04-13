@@ -1,0 +1,172 @@
+
+main .bloq-registrer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    width: 280px;
+    max-width: 90%;
+    margin-bottom: 25px;
+    background-color: #265e28;
+    color: white;
+    border-radius: 25px;
+    border: black 2px solid;
+}
+
+/* .container-form {
+    width: 90%;
+    max-width: 500px;
+    min-height: auto;
+    max-height: 90vh;
+    background-color: #265e28b9;
+    border: black solid;
+    padding: 20px 15px;
+    margin: 30px 0;
+    border-radius: 15px;
+    text-align: center;
+    overflow-y: auto;
+} */
+
+.text-form-animal {
+    color: white;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.div-form-animal .controls {
+    width: 90%;
+    padding: 12px;
+    font-weight: bolder;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: #aaa solid 1px;
+}
+
+.div-form-animal .control-radio {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+    font-weight: bolder;
+    margin-left: 25px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+input[type="submit"] {
+    background-color: #265e28;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 90%;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: none;
+}
+
+
+/* Media Queries para Diseño Responsive */
+/* Tablets y dispositivos medianos */
+@media screen and (max-width: 992px) {
+    .header-container {
+        min-height: 60px;
+    }
+    
+    .header-image .logo-agroplus {
+        height: 50px;
+        margin-left: 15px;
+    }
+    
+    .header-container .barra-nav li {
+        padding-right: 12px;
+        margin-right: 12px;
+    }
+    
+    .barra-nav a i {
+        font-size: 1.2rem;
+    }
+    
+    .container-form {
+        width: 70%;
+        padding: 15px 10px;
+    }
+    
+    .text-form-animal {
+        font-size: 1.1rem;
+    }
+    
+    .div-form-animal .control-radio {
+        margin-left: 15px;
+    }
+}
+
+/* Dispositivos móviles */
+@media screen and (max-width: 768px) {
+    * {
+        font-size: 15px;
+    }
+    main {
+        min-height: 100vh;
+        padding: 10px;
+    }
+    
+    .container-form {
+        width: 90%;
+        margin: 20px 0;
+        padding: 15px 10px;
+    }
+    
+    .text-form-animal {
+        font-size: 1rem;
+    }
+    
+    .div-form-animal .controls {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .div-form-animal .control-radio {
+        margin-left: 10px;
+        justify-content: center;
+    }
+    
+    input[type="submit"] {
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+/* Dispositivos muy pequeños */
+@media screen and (max-width: 480px) {
+    
+    .barra-nav a i {
+        font-size: 1rem;
+    }
+    
+    .container-form {
+        width: 95%;
+        padding: 12px 8px;
+        margin: 15px 0;
+    }
+    
+    .text-form-animal {
+        margin: 8px 0;
+    }
+    
+    .div-form-animal .controls {
+        margin-top: 12px;
+        padding: 8px;
+    }
+    
+    .div-form-animal .control-radio {
+        margin-top: 12px;
+        margin-left: 5px;
+    }
+    
+    input[type="submit"] {
+        margin-top: 15px;
+    }
+    
+}
