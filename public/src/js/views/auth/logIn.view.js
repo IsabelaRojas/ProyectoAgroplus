@@ -1,5 +1,7 @@
-import { renderHeader } from "../landing-page/header.view.js";
 import { redirectTo } from '../../app.js'
+import { redirectTo } from '../../app.js';
+import { logInApi } from '../../api/auth.api.js';
+
 
 export function renderLogIn(app) {
     app.innerHTML = `
@@ -17,15 +19,48 @@ export function renderLogIn(app) {
                 </form>
                 <div id="mensaje-exito">¡Inicio de sesión exitoso!</div>
             </div>
-        
+
             <div id="dashboard-container" style="display: none;"></div>
-            
+
             <div class="div-registrarse">
                 <a href="#" id="link-signup">Regístrese aquí</a>
             </div>
         </section>
     </main>`;
-            
+
+    document.getElementById('form-login').addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+
+        const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+        const passwordRegex = /^.{8,}$/; // Al menos 8 caracteres
+
+        if (!emailRegex.test(email)) {
+            alert('Correo electrónico no válido');
+            return;
+        }
+
+        if (!passwordRegex.test(password)) {
+            alert('La contraseña debe tener al menos 8 caracteres');
+            return;
+        }
+
+        const loginData = {
+            email: email,
+            password: password
+        }
+
+        const dataApi = await logInApi(loginData);
+        console.log('Respuesta de la API. response.json():', dataApi);
+
+        if(dataApi.success === true){
+            console.log('Inicio de sesión exitoso:', dataApi.data);
+            redirectTo('/dashboard');
+        }
+    });
+
     document.getElementById('link-signup').addEventListener('click', () => {
         console.log('linkSignUp button clicked');
         redirectTo('/sign-up');
@@ -34,7 +69,6 @@ export function renderLogIn(app) {
     // <div class="div-forgot-password">
     //     <a href="#" id="link-forgot">¿Olvidó su contraseña?</a>
     // </div>
-    } 
+}
 
-    
-    
+

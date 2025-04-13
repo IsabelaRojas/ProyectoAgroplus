@@ -1,6 +1,6 @@
 export function renderYoungRegistrationForm() {
-    return
-    `<main>
+    return `
+      <main>
         <section class="container-form">
             <div class="text-form-animal">
                 <h2>Formulario Crias</h2>
@@ -22,8 +22,8 @@ export function renderYoungRegistrationForm() {
                         <input class="controls" type="text" id="sexo" name="sexo" placeholder="Cantidad de machos">
 
                         <input class="controls" type="text" id="id_cria" name="id_cria" placeholder="Ingrese el codigo de la cria">
-                      
-  
+
+
                         <label class="control-radio" for="fecha_nacimiento">Fecha de nacimiento:</label>
                         <input class="controls" type="date" id="fecha_nacimiento" name="fecha_nacimiento">
 
