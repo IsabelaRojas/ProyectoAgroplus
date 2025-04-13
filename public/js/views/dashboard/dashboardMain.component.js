@@ -18,7 +18,7 @@ export function renderDashboardMain() {
         </section>
         <div class="icon-whatsapp">
             <a href="https://wa.me/573133001189?" class="whatsapp" target="_blank">
-                <img src="../../assets/iconos/icons8-whatsapp.svg" alt="WhatsApp" />
+                <img src="/assets/iconos/icons8-whatsapp.svg" alt="WhatsApp" />
             </a>
         </div>
     </main>

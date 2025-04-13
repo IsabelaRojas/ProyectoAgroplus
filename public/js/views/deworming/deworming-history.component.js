@@ -1,6 +1,6 @@
 export function renderDewormingHistory() {
     return `
-    <main>
+    <main class="background-history-dashboard">
         <div class="bloq-registrer">
             <a href="../HTML deworming/desparasitacion.html"><i class="fa-solid fa-square-plus"></i>Nuevo registro</a>
         </div>

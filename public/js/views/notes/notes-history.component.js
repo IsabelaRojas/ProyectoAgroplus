@@ -1,6 +1,6 @@
 export function renderNotesHistory() {
     return `
-    <main>
+    <main class="class="background-history-dashboard"">
         <div class="bloq-registrer">
             <a href="../HTML notes/notas.html"><i class="fa-solid fa-square-plus"></i>Nuevo registro</a>
         </div>

@@ -61,6 +61,10 @@ header.scrolled {
     padding: 0 20px;
 }
 
+/* .logo-agroplus-2 {
+    background-image: url(../assets//iconos/Agroplus.png);
+} */
+
 .header-image {
     display: flex;
     align-items: center;

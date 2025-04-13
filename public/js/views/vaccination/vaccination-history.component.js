@@ -1,6 +1,6 @@
 export function renderVaccinationHistory() {
     return `
-    <main>
+    <main class="background-history-dashboard">
         <section class="container-form">
             <div class="text-form-animal">
                 <h2>Formulario Vacunación</h2>

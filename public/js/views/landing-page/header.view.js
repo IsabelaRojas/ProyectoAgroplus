@@ -3,10 +3,10 @@ export function renderHeader() {
     <header class="header-container">
         <div class="header-image">
             <div class="logo-agroplus">
-                <img src="../../assets/iconos/logo agroplus.png" alt="Logo Agroplus">
+                <img src="assets/iconos/logo agroplus.png" alt="Logo Agroplus">
             </div>
             <div class="logo-agroplus">
-                <img src="../../assets/iconos/Agroplus.png" alt="Agroplus">
+                <img src="assets/iconos/Agroplus.png" alt="Agroplus">
             </div>
         </div>
         <div class="nav-links">

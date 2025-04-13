@@ -320,6 +320,19 @@ header {
     text-align: center;
 }
 
+main, .background-history-dashboard {
+    background-image: url('https://images.pexels.com/photos/19992607/pexels-photo-19992607/free-photo-of-ovejas-en-pasto-verde.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
 
 /* ===== FOOTER ===== */
 footer {

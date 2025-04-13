@@ -5,7 +5,7 @@ export function renderFeatures() {
         <div class="features-container">
             <div class="feature-card animate-float">
                 <div class="feature-img">
-                    <img src="../../assets/Imagenes/pexels-photo-12578636.webp" alt="Gestión de Animales">
+                    <img src="/assets/Imagenes/pexels-photo-12578636.webp" alt="Gestión de Animales">
                 </div>
                 <div class="feature-content">
                     <h3 class="feature-title">Control de Animales</h3>
@@ -15,7 +15,7 @@ export function renderFeatures() {
             
             <div class="feature-card animate-float">
                 <div class="feature-img">
-                    <img src="../../assets/Imagenes/pexels-photo-oevjas.jpeg" alt="Salud animal">
+                    <img src="/assets/Imagenes/pexels-photo-oevjas.jpeg" alt="Salud animal">
                 </div>
                 <div class="feature-content">
                     <h3 class="feature-title">Salud Animal</h3>
@@ -25,7 +25,7 @@ export function renderFeatures() {
             
             <div class="feature-card animate-float">
                 <div class="feature-img">
-                    <img src="../../assets/Imagenes/pexels-photo-gallina.webp" alt="Productividad">
+                    <img src="/assets/Imagenes/pexels-photo-gallina.webp" alt="Productividad">
                 </div>
                 <div class="feature-content">
                     <h3 class="feature-title">Análisis de Productividad</h3>
