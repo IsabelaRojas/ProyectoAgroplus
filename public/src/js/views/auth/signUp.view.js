@@ -67,7 +67,7 @@ export function renderSignUp(app) {
       const dataApi = await signUpApi(signUpData);
       console.log('Respuesta de la API. response.json():', dataApi);
 
-      if(dataApi.status === 201 || dataApi.sucess === true){
+      if(dataApi.status === 201 || dataApi.success === true){
           console.log('Registro exitoso:', dataApi.data);
           redirectTo('/log-in');
       } else {

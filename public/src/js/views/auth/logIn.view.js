@@ -55,7 +55,7 @@ export function renderLogIn(app) {
         const dataApi = await logInApi(loginData);
         console.log('Respuesta de la API. response.json():', dataApi);
 
-        if(dataApi.status === 200){
+        if(dataApi.success === true){
             console.log('Inicio de sesión exitoso:', dataApi.data);
             redirectTo('/dashboard');
         }
