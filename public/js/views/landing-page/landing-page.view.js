@@ -1,5 +1,4 @@
 import { redirectTo } from '../../app.js'
-
 import { renderHeader } from './header.view.js'
 import { renderHero } from './hero.view.js'
 import { renderFeatures } from './features.view.js'

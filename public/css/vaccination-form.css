@@ -1,17 +1,4 @@
 
-main .bloq-registrer{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
-    padding: 20px;
-    width: 300px;
-    margin-bottom: 30px;
-    background-color: #265e28;
-    color: white;
-    border-radius: 30px;
-    border: black 2px solid;
-}
 /* .container-form{
     width: 30%; 
     min-height: 85%;

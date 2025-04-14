@@ -1,14 +1,14 @@
 import { renderPagingRecordTable } from '../../components/layout/paging-record-table.component.js'
 import { renderRecordsTable } from '../../components/layout/records-table.component.js'
 
-const columns = ['Tipo de ganado', 'Animal', 'Codigo animal', 'Sexo', 'Fecha de regsitro', 'Opciones'];
+const columns = ['Tipo de ganado', 'Tipo de Animal', 'Raza', 'Codigo animal', 'Sexo', 'Madre', 'Padre', 'Fecha de nacimiento', 'Fecha de regsitro', 'Opciones'];
 
 export function renderAnimalHistory() {
     return `
     <main class="background-history-dashboard">
         <!-- Bloque de registro -->
-        <div class="bloq-registrer">
-            <a href="./animales.html">
+        <div class="bloq-registrer" id="btn-registrar-animales">
+            <a >
                 <i class="fa-solid fa-plus"></i> Registrar Nuevo Ganado
             </a>
         </div>

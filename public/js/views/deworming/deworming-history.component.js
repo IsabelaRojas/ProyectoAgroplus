@@ -1,14 +1,29 @@
+import { renderPagingRecordTable } from '../../components/layout/paging-record-table.component.js'
+import { renderRecordsTable } from '../../components/layout/records-table.component.js'
+
+const columns = ['Tipo de ganado', 'Codigo animal', 'Dosis consumida', 'Desparasitante', 'laboratorio', 'Fecha de regsitro', 'Opciones'];
+
 export function renderDewormingHistory() {
     return `
-    <main class="background-history-dashboard">
-        <div class="bloq-registrer">
-            <a href="../HTML deworming/desparasitacion.html"><i class="fa-solid fa-square-plus"></i>Nuevo registro</a>
-        </div>
-        <section class="bloques-proyecto"> 
-            <div class="bloq-privado">
-                <h1>Historial registro Desparasitaciones</h1>
-            </div>    
-        </section>
-    </main>
+<main class="background-history-dashboard">
+    <!-- Bloque de registro -->
+    <div class="bloq-registrer" id="btn-registrar-desparasitar">
+        <a >
+            <i class="fa-solid fa-plus"></i> Registrar Nueva Desparacitación
+        </a>
+    </div>
+
+    <!-- Título principal -->
+    <div class="bloq-privado">
+        <h1>Historial desparasitación</h1>
+    </div>
+
+    <!-- Bloques principales del proyecto -->
+    <div class="bloques-proyecto">
+    ${renderRecordsTable(columns)}
+    ${renderPagingRecordTable()}
+        
+    </div>
+</main>
     `;
 }

@@ -7,11 +7,10 @@ export function renderDashboardMain() {
             </div>
             <ul>
                 <li>
-                    <a href="../../animales/HTML animals/historialanimales.html" class="bloq">Animales</a>
-                    <a href="../../crias/HTML young/historialcrias.html" class="bloq"> Crias</a>
-                    <a href="../../vacunacion/HTML vaccination/historialvacunacion.html" class="bloq">Vacunación</a>
-                    <a href="../../Desparasitación/HTML deworming/historialdesparasitacion.html" class="bloq">Desparasitación</a>
-                    <a href="../../notas/HTML notes/historialnotas.html" class="bloq">Notas</a>
+                    <a href="" class="bloq" id="btnAnimals">Animales</a>
+                    <a href="" class="bloq" id= "btnVaccinacion">Vacunación</a>
+                    <a href="" class="bloq" id= "btnDeworming">Desparasitación</a>
+                    <a href="" class="bloq" id= "btonNotes">Notas</a>
 
                 </li>
             </ul>

@@ -4,14 +4,23 @@
 }
 
 /* Estilos generales */
-body {
+/* body {
     min-height: 100vh;
+} */
+
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
     color: white;
     transition: color 0.3s;
+}
+
+.hidden {
+    display: none;
 }
 
 a:hover {
@@ -25,6 +34,10 @@ header {
     min-height: 60px;
     background-color: #265e28;
     border-bottom: 1px solid black;
+}
+
+#header-dashboard {
+    position: relative;
 }
 
 .header-container {
@@ -308,16 +321,24 @@ header {
     flex-direction: row;
 }
 
-
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  
 
 .container-form{
-    width: 30%; 
-    height: 45%;
-    background-color: #265e28b9;
+    background-color: #265e28;
+    margin-top: 40px;
     border: black 2px solid;
     padding: 20px; 
     border-radius: 15px;
     text-align: center;
+}
+
+main {
+    flex: 1; /* Hace que el main ocupe el espacio restante */
 }
 
 main, .background-history-dashboard {
@@ -333,6 +354,38 @@ main, .background-history-dashboard {
     padding: 20px;
 }
 
+.bloques-proyecto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bloq-privado h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-shadow: -2px -2px 0 rgb(1, 64, 6),
+                  2px -2px 0 rgb(1, 64, 6),
+                 -2px  2px 0 rgb(1, 64, 6),
+                  2px  2px 0 rgb(1, 64, 6);
+}
+
+main .bloq-registrer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    background-color: #265e28;
+    color: white;
+    border-radius: 30px;
+    border: black 2px solid;
+}
 
 /* ===== FOOTER ===== */
 footer {

@@ -1,6 +1,6 @@
 export function renderNavbar() {
     return `
-    <header>
+    <header id="header-dashboard">
         <section class="header-container">
             <div class="header-image">
                 <div class="logo-agroplus">

@@ -21,7 +21,7 @@ export function renderSignUp(app) {
             </form>
           </div>
           <div class="div-account">
-            <a href="#" id="go-to-login">¿Ya tengo cuenta?</a>
+            <a id="go-to-login">¿Ya tengo cuenta?</a>
           </div>
         </section>
     </main>`;
@@ -77,7 +77,7 @@ export function renderSignUp(app) {
   });
 
     document.getElementById('go-to-login').addEventListener('click', () => {
-      console.log('linkSignUp button clicked');
+      console.log('linkLogIn button clicked');
       redirectTo('/log-in');
   });
 }

@@ -6,10 +6,10 @@ import { renderLogIn } from './views/auth/logIn.view.js';
 import { renderForgotPassword } from './views/auth/forgotPassword.view.js';
 import { renderDashboard } from './views/dashboard/renderDashboard.view.js';
 import { renderAnimalRecords} from './views/animals/renderAnimalRecords.view.js';
-import { renderYoungRecords } from './views/young/renderYoung.view.js';
 import { renderDewormingRecords } from './views/deworming/renderDewormingRecords.view.js';
 import { renderNotesRecords } from './views/notes/renderNotesRecords.view.js';
 import { renderVaccinationRecords} from './views/vaccination/renderVaccinationRecords.view.js';
+import { renderFooter } from './components/layout/footer.component.js';
 
 
 const routes = {
@@ -26,9 +26,6 @@ const routes = {
     //animals
     '/animals-record': renderAnimalRecords,
 
-    //young
-    '/young-record': renderYoungRecords,
-
     //deworming
     '/deworming-record': renderDewormingRecords,
 
@@ -37,6 +34,9 @@ const routes = {
 
     //vaccination
     '/vaccination-record': renderVaccinationRecords,
+
+    //footer
+    '/footer': renderFooter,
 };
 
 function renderPage(route) {

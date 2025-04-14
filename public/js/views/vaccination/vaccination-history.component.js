@@ -1,46 +1,29 @@
+import { renderPagingRecordTable } from '../../components/layout/paging-record-table.component.js'
+import { renderRecordsTable } from '../../components/layout/records-table.component.js'
+
+const columns = ['Tipo de ganado', 'Codio animal', 'Dosis aplicada', 'Tipo de vacuna', 'Fecha de vacunación', 'laboratorio', 'Opciones'];
+
 export function renderVaccinationHistory() {
     return `
-    <main class="background-history-dashboard">
-        <section class="container-form">
-            <div class="text-form-animal">
-                <h2>Formulario Vacunación</h2>
-            </div>
-            <div class="div-form-animal">
-                <input class="controls" type="text" id="id_vacuna" name="id_vacuna" placeholder="Ingrese el ID de la vacuna">
-                <input class="controls" type="text" id="id_animal" name="id_animal" placeholder="Ingrese el ID del animal">
-                <input class="controls" type="text" id="tipo_vacuna" name="tipo_vacuna" placeholder="Ingrese el tipo de vacuna">
+<main class="background-history-dashboard">
+    <!-- Bloque de registro -->
+    <div class="bloq-registrer" id="btn-registrar-vacuna">
+        <a >
+            <i class="fa-solid fa-plus"></i> Registrar Nueva vacuna
+        </a>
+    </div>
 
-                <form>
-                    <select class="controls" id="ganado" name="ganado">
-                        <option value="" disabled selected>Seleccione un tipo de ganado</option>
-                        <option value="vacuno">Vacuno</option>
-                        <option value="Ovino">Ovino</option>
-                        <option value="Porcino">Porcino</option>
-                        <option value="Caprino">Caprino</option>
-                        <option value="Equino">Equino</option>
-                        <option value="gallina">Gallo / Gallina</option>
-                    </select>
-         
-                    <div id="opciones-animales" style="display: none;">
-                        <label for="animales">Seleccione un animal:</label>
-                        <select class="controls" id="animales" name="animales">
-                           
-                        </select>
-                    </div>
+    <!-- Título principal -->
+    <div class="bloq-privado">
+        <h1>Historial Vacunación</h1>
+    </div>
 
-
-                        <input class="controls" type="text" id="dosis" name="dosis" placeholder="Ingrese la dosis aplicada">
-                      
-  
-                        <label class="control-radio" for="fecha_vacunacion">Fecha de vacunación:</label>
-                        <input class="controls" type="date" id="fecha_vacunacion" name="fecha_vacunacion">
-
-                        <input class="controls" type="text" id="id_laboratorio" name="id_laboratorio" placeholder="Ingrese el laboratorio de la vacuna">
-
-                        <input class="controls" type="submit">
-                </form>
-            </div>
-        </section>
-    </main>
+    <!-- Bloques principales del proyecto -->
+    <div class="bloques-proyecto">
+    ${renderRecordsTable(columns)}
+    ${renderPagingRecordTable()}
+        
+    </div>
+</main>
     `;
 }
