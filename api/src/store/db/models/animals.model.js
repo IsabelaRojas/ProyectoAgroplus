@@ -7,8 +7,8 @@ const AnimalSchema = {
   id: {
     allowNull: false,
     primaryKey: true,
-    autoIncrement: true,
-    type: DataTypes.INTEGER
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
   },
   livestockType: {
     field: 'livestock_type',
@@ -47,7 +47,7 @@ const AnimalSchema = {
   motherId: {
     field: 'mother_id',
     allowNull: true,
-    type: DataTypes.INTEGER,
+    type: DataTypes.UUID,
     references: {
       model: ANIMAL_TABLE,
       key: 'id',
@@ -58,7 +58,7 @@ const AnimalSchema = {
   fatherId: {
     field: 'father_id',
     allowNull: true,
-    type: DataTypes.INTEGER,
+    type: DataTypes.UUID,
     references: {
       model: ANIMAL_TABLE,
       key: 'id',
@@ -69,7 +69,7 @@ const AnimalSchema = {
   userId: {
     field: 'user_id',
     allowNull: true,
-    type: DataTypes.INTEGER,
+    type: DataTypes.UUID,
     references: {
       model: USER_TABLE,
       key: 'id',
@@ -81,7 +81,9 @@ const AnimalSchema = {
 
 class Animal extends Model {
   static associate(models) {
-
+    this.belongsTo(models.User, { as: 'user' });
+    this.belongsTo(models.Animal, { as: 'mother', foreignKey: 'motherId' });
+    this.belongsTo(models.Animal, { as: 'father', foreignKey: 'fatherId' });
   }
 
   static config(sequelize){

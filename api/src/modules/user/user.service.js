@@ -1,6 +1,7 @@
 const Boom = require('@hapi/boom');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const { v4: uuidv4 } = require('uuid');
 
 const { config } = require('../../../config/config');
 const userRepository = require('./user.repository');
@@ -18,11 +19,12 @@ const createUser = async (userData) => {
   if(userAlreadyExist?.id) throw Boom.conflict('User already exists');
 
   const user = {
+    id: uuidv4(),
     name: userData?.name,
     email: userData?.email,
     password: await bcrypt.hash(userData?.password, 10),
     role: 'basic',
-    createdAt: new Date().toISOString(),
+    createdAt: new Date().toISOString().split('T')[0],
   }
 
   const newUser = await userRepository.create(user);

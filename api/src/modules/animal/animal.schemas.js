@@ -1,10 +1,10 @@
 const Joi = require('joi');
 
-const id = Joi.number().integer();
+const id = Joi.string().uuid();
 const livestockType = Joi.string().min(1).max(80);
 const animalType = Joi.string().min(1).max(100);
-const code = Joi.string().min(2).max(128);
 const breed = Joi.string().min(2).max(128);
+const code = Joi.string().min(2).max(128);
 const sex = Joi.string().valid('Male', 'Female');
 const date = Joi.date();
 

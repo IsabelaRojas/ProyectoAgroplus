@@ -7,8 +7,8 @@ const NoteSchema = {
   id: {
     allowNull: false,
     primaryKey: true,
-    autoIncrement: true,
-    type: DataTypes.INTEGER
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
   },
   title: {
     allowNull: false,
@@ -21,7 +21,7 @@ const NoteSchema = {
   userId: {
     field: 'user_id',
     allowNull: false,
-    type: DataTypes.INTEGER,
+    type: DataTypes.UUID,
     references: {
       model: USER_TABLE,
       key: 'id',
@@ -39,7 +39,10 @@ const NoteSchema = {
 
 class Note extends Model {
   static associate(models) {
-
+    this.belongsTo(models.User, {
+      as: 'user',
+      foreignKey: 'userId'
+    });
   }
 
   static config(sequelize){

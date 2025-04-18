@@ -7,10 +7,10 @@ const VaccinationSchema = {
   id: {
     allowNull: false,
     primaryKey: true,
-    autoIncrement: true,
-    type: DataTypes.INTEGER
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
   },
-  vacuna: {
+  vaccine: {
     allowNull: false,
     type: DataTypes.STRING,
   },
@@ -21,7 +21,7 @@ const VaccinationSchema = {
   animalId: {
     field: 'animal_id',
     allowNull: false,
-    type: DataTypes.INTEGER,
+    type: DataTypes.UUID,
     references: {
       model: ANIMAL_TABLE,
       key: 'id',
@@ -39,7 +39,10 @@ const VaccinationSchema = {
 
 class Vaccination extends Model {
   static associate(models) {
-
+    this.belongsTo(models.Animal, {
+      as: 'animal',
+      foreignKey: 'animalId'
+    });
   }
 
   static config(sequelize){

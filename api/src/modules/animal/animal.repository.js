@@ -1,11 +1,49 @@
 const sequelize = require('../../store/db/sequelize');
 
-const findAllAnimals = async (userId) => {
-  return await sequelize.models.Animal.findAll({ where: { userId } });
+const findAllAnimals = async (filters) => {
+  return await sequelize.models.Animal.findAll({
+    where: filters,
+    include: [
+      {
+        model: sequelize.models.Animal,
+        as: 'mother',
+        attributes: ['id', 'code', 'breed'],
+      },
+      {
+        model: sequelize.models.Animal,
+        as: 'father',
+        attributes: ['id', 'code', 'breed'],
+      },
+      {
+        model: sequelize.models.User,
+        as: 'user',
+        attributes: ['id', 'name'],
+      }
+    ]
+  });
 }
 
 const findOne = async (userId, animalId) => {
-  return await sequelize.models.Animal.findOne({ where: { userId, id: animalId } });
+  return await sequelize.models.Animal.findOne({
+    where: { userId, id: animalId },
+    include: [
+      {
+        model: sequelize.models.Animal,
+        as: 'mother',
+        attributes: ['id', 'code', 'breed'],
+      },
+      {
+        model: sequelize.models.Animal,
+        as: 'father',
+        attributes: ['id', 'code', 'breed'],
+      },
+      {
+        model: sequelize.models.User,
+        as: 'user',
+        attributes: ['id', 'name'],
+      }
+    ]
+  });
 }
 
 const create = async (animalData) => {
