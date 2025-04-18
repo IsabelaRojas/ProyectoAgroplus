@@ -5,9 +5,9 @@ const columns = ['Tipo de ganado', 'Codigo animal', 'Dosis consumida', 'Desparas
 
 export function renderDewormingHistory() {
     return `
-<main class="background-history-dashboard">
+<main >
     <!-- Bloque de registro -->
-    <div class="bloq-registrer" id="btn-registrar-desparasitar">
+    <div class="bloq-registrer" id="btn-registrar-desparasitacion">
         <a >
             <i class="fa-solid fa-plus"></i> Registrar Nueva Desparacitación
         </a>

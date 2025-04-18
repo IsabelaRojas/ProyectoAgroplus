@@ -14,7 +14,7 @@ export function renderDewormingRecords(app){
         ${renderFooter()}
     </div>
     `;
-    const btnAbrirModal = document.getElementById('btn-registrar-desparasitar');
+    const btnAbrirModal = document.getElementById('btn-registrar-desparasitacion');
     const modalFormulario = document.getElementById('modal-formulario');
     const cerrarFormulario = document.getElementById('cerrar-formulario');
     const formulario = document.getElementById('form-desparasitacion');

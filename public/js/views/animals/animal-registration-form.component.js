@@ -1,3 +1,6 @@
+import { renderModalConfirmarEliminación } from "../../components/modal/confirmar-eliminacion.modal.js";
+import { renderModalExito } from "../../components/modal/mensaje-exito.modal.js";
+
 export function renderAnimalsRegistrationForm() {
     return `
  <div id="modal-formulario" class="modal">
@@ -31,17 +34,18 @@ export function renderAnimalsRegistrationForm() {
                         </select>
                         
                         <label class="control-radio" for="fecha-nacimiento-cria">Fecha de nacimiento:</label>
-                        <input class="controls" type="date" id="fecha-nacimiento-cria" name="fecha-nacimiento-cria">
+                        <input class="controls" type="date" id="fecha-nacimiento" name="fecha-nacimiento">
 
-                        <select class="controls" id="id-padre" name="id-padre">
-                            <option value="" disabled selected>Seleccione el padre (si aplica)</option>
+                        <select class="controls select-father" id="id-padre" name="id-padre">
+                            <option class="option-select" value="" disabled selected>Seleccione el padre (si aplica)</option>
                         </select>
 
-                        <select class="controls" id="id-madre" name="id-madre">
-                            <option value="" disabled selected>Seleccione la madre (si aplica)</option>
+                        <select class="controls select-mother" id="id-madre" name="id-madre">
+                            <option class="option-select" value="" disabled selected>Seleccione la madre (si aplica)</option>
                         </select>
 
-                        <input class="controls" type="submit" value="Registrar Animal">
+                        <input id="crear-registro" class="controls" type="submit" value="Registrar Animal"> 
+                        <input id="actualizar-registro" class="controls hidden" type="submit" value="Actualizar Animal"> 
                     </form>
                 </div>
             </section>
@@ -49,12 +53,23 @@ export function renderAnimalsRegistrationForm() {
     </div>
 
     <!-- Modal de mensaje de éxito -->
-    <div id="mensaje-exito" class="modal">
-        <div class="modal-contenido">
-            <span class="cerrar-modal" id="cerrar-exito">&times;</span>
-            <p>✅ Registro exitoso</p>
-            <button id="cerrar-modal-exito">Cerrar</button>
-        </div>
-    </div>
+    ${renderModalExito()}
+    <!-- Modal confirmación de eliminación -->
+    ${renderModalConfirmarEliminación()}
     `;
+}
+export function createOptionElement(animals, sex) {
+    console.log('animals, sex:', animals, sex);
+    
+    const sexTranslation = {
+        'Macho': 'Male',
+        'Hembra': 'Female'
+    };
+    console.log('sexTranslation[sex]:', sexTranslation[sex]);
+    const options = animals
+        .filter(animal => animal.sex == sexTranslation[sex])
+        .map(animal => `<option value="${animal.id}">${animal.code}</option>`)
+        .join('');
+    console.log('options:', options);
+    return options;
 }
